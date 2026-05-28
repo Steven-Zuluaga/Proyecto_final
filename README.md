@@ -8,7 +8,7 @@ Proyecto final --- Camilo Zuluaga - Thomas Suarez
  
 ### 1. Ejecución
  
-Desde la terminal, ubíquese en la carpeta del proyecto y ejecute:
+Ejecutar:
  
 ```bash
 python Main.py
@@ -16,7 +16,7 @@ python Main.py
  
 ### 2. Menú principal
  
-Al iniciar, verá el siguiente menú:
+Se vera el siguiente menú:
  
 ```
    CALCULADORA CIENTIFICA GRAFICADORA
@@ -29,7 +29,7 @@ Al iniciar, verá el siguiente menú:
 6. Salir
 ```
  
-Ingrese el número de la opción deseada y presione **Enter**.
+Ingrese el número de la opción deseada y Continue.
  
 ### 3. Operaciones básicas
  
@@ -51,16 +51,14 @@ Incluye: **factorial, raíz cuadrada, exponencial (eˣ), seno, coseno y logaritm
  
 Permite evaluar una de las siguientes funciones predefinidas en un valor x:
  
-| Opción | Función |
-|--------|---------|
-| 1 | Lineal: f(x) = 2x + 1 |
-| 2 | Cuadrática: f(x) = x² |
-| 3 | Cúbica: f(x) = x³ |
-| 4 | Mixta: f(x) = x² + 2x + 1 |
+1: Lineal: f(x) = 2x + 1 
+2: Cuadrática: f(x) = x² 
+3: Cúbica: f(x) = x³ 
+4: Mixta: f(x) = x² + 2x + 1 
  
 ### 6. Graficar una función en consola
  
-Dibuja la gráfica de una función directamente en la terminal usando caracteres `*`.
+Gráfica una función directamente en la terminal usando `*`.
  
 Funciones disponibles: `lineal`, `cuadratica`, `cubica`, `seno_aprox`
  
@@ -75,16 +73,13 @@ El programa valida que el valor inicial sea menor que el final.
  
 ### 7. Ver historial
  
-Muestra todas las operaciones realizadas en la sesión actual, numeradas en orden cronológico.
+Muestra todas las operaciones realizadas en la sesión actual, numeradas en orden.
  
 ---
  
 ## Métodos de aproximación utilizados
  
-Todas las funciones científicas fueron implementadas **desde cero**, sin usar el módulo `math` de Python. A continuación se explica cada método empleado.
- 
-### Potencia entera — Multiplicación iterativa
- 
+### Potencia entera 
 Para calcular `base^exponente` con exponente entero ≥ 0, se realizan multiplicaciones sucesivas:
  
 ```
@@ -92,9 +87,8 @@ resultado = 1
 repetir 'exponente' veces: resultado = resultado × base
 ```
  
-Esto implementa directamente la definición de potencia como multiplicación repetida. No requiere aproximación ya que opera sobre valores exactos.
  
-### Factorial — Producto iterativo
+### Factorial
  
 El factorial de n (n!) se calcula multiplicando todos los enteros de 1 hasta n:
  
@@ -103,9 +97,7 @@ resultado = 1
 para i desde 1 hasta n: resultado = resultado × i
 ```
  
-Al igual que la potencia, es un cálculo exacto mediante iteración simple.
- 
-### Raíz cuadrada — Método de Newton-Raphson (Método de Herón)
+### Raíz cuadrada 
  
 Para calcular √n, se parte de una estimación inicial (`n/2`) y se refina iterativamente usando la fórmula:
  
@@ -113,11 +105,9 @@ Para calcular √n, se parte de una estimación inicial (`n/2`) y se refina iter
 estimacion = (estimacion + n / estimacion) / 2
 ```
  
-Este proceso se repite 50 veces. Cada iteración acerca la estimación a la raíz verdadera de forma cuadrática (los decimales correctos se duplican en cada paso), logrando una precisión muy alta en pocas iteraciones.
+Este proceso se repite 50 veces. Cada iteración acerca la estimación a la raíz verdadera de forma cuadrática.
  
-**Ejemplo:** para √2, desde estimacion=1.0 se obtiene rápidamente 1.41421356...
- 
-### Exponencial — Serie de Taylor de eˣ
+### Exponencial 
  
 La función e^x se calcula sumando los primeros 50 términos de su serie de Taylor:
  
@@ -125,9 +115,9 @@ La función e^x se calcula sumando los primeros 50 términos de su serie de Tayl
 e^x = 1 + x + x²/2! + x³/3! + x⁴/4! + ...
 ```
  
-El programa acumula los términos de forma eficiente: en lugar de recalcular cada factorial, el término siguiente se obtiene multiplicando el anterior por `x/i`. Con 50 términos se obtiene una precisión excelente para la mayoría de valores de x.
+En lugar de recalcular cada factorial, el término siguiente se obtiene multiplicando el anterior por `x/i`. Con 50 términos se obtiene una precisión excelente para la mayoría de valores de x.
  
-### Seno — Serie de Taylor de sin(x)
+### Seno 
  
 La función seno se aproxima con 15 términos de la serie de Taylor:
  
@@ -137,15 +127,15 @@ sin(x) = x − x³/3! + x⁵/5! − x⁷/7! + ...
  
 Los signos alternan entre positivo y negativo. Al igual que la exponencial, el programa calcula cada término a partir del anterior para optimizar el proceso. Con 15 términos se obtiene alta precisión para ángulos en el rango habitual.
  
-### Coseno — Serie de Taylor de cos(x)
+### Coseno 
  
-Análogo al seno, con 15 términos:
+Igual al seno, con 15 términos:
  
 ```
 cos(x) = 1 − x²/2! + x⁴/4! − x⁶/6! + ...
 ```
  
-El primer término es 1 (en lugar de x), y los exponentes del numerador son pares. La misma estrategia de término-a-término se aplica aquí.
+El primer término es 1 (en lugar de x), y los exponentes del numerador son pares. La misma estrategia de término-a-término se aplica igual.
  
 ### Logaritmo natural — Serie de la función artanh
  
