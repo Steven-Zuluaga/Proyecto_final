@@ -1,30 +1,7 @@
-
-raw
-Readme · MD
 # Calculadora Científica Graficadora
  
-Proyecto final — Calculadora en consola desarrollada en Python que implementa operaciones básicas, funciones científicas con métodos de aproximación propios, evaluación y graficación de funciones en la terminal, e historial de operaciones.
- 
----
- 
-## Requisitos
- 
-- Python 3.8 o superior
-- No requiere librerías externas (todo funciona con Python puro)
----
- 
-## Estructura del proyecto
- 
-```
-Proyecto_final/
-├── Main.py                    # Punto de entrada y menús del programa
-├── Operaciones_Basicas.py     # Suma, resta, multiplicación, división, potencia
-├── Operaciones_Cientificas.py # Factorial, raíz, exponencial, seno, coseno, logaritmo
-├── Graficadora.py             # Graficación de funciones en consola
-├── Historial.py               # Registro de operaciones realizadas
-└── README.md                  # Este archivo
-```
- 
+Proyecto final --- Camilo Zuluaga - Thomas Suarez
+
 ---
  
 ## Instrucciones de uso
