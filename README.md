@@ -159,3 +159,8 @@ seno_aprox(x) = x − x³/6 + x⁵/120
 ```
  
 Esta versión simplificada es suficiente para visualizar la forma de la curva en la consola, donde la resolución es limitada por el tamaño de los caracteres.
+
+## Reflexión sobre las dificultades encontradas
+
+Reflexión sobre las dificultades encontradas
+Una de las principales dificultades fue implementar las funciones matemáticas sin apoyarnos en librerías externas, ya que esto nos obligó a investigar y entender cómo funcionan por dentro operaciones que normalmente damos por sentadas. El logaritmo fue la que más trabajo nos costó, pues encontrar una forma de calcularlo correctamente tomó varios intentos. La graficadora también representó un reto, ya que traducir valores numéricos a una imagen hecha de caracteres en consola no fue tan directo como esperábamos. En general, fue un proceso de mucho ensayo y error que al final nos dejó un aprendizaje muy sólido.
