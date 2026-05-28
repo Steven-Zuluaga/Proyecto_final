@@ -69,7 +69,7 @@ def menu_basicas():
 
 # Operaciones Cientificas
 def menu_cientificas():
-    print('\n  --- Operaciones Cientificas ---')
+    print('\n Operaciones Cientificas')
     print('  1. Factorial  (n!)')
     print('  2. Raiz cuadrada')
     print('  3. Exponencial  (e^x)')
@@ -162,7 +162,7 @@ def menu_evaluar():
 
 # Graficar Una Funcion
 def menu_graficar():
-    print('\nGraficar una Funcion en Consola')
+    print('\n Graficar una Funcion en Consola')
     gr.mostrar_funciones_disponibles()
 
     nombre = input(' Escriba el nombre de la funcion: ').strip().lower()
