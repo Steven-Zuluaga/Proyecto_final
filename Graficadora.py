@@ -15,7 +15,7 @@ def graficar(nombre_funcion, x_inicio=-5, x_fin=5, ancho=60, alto=20):
     f = funciones[nombre_funcion]
 
     valores_y = []
-    paso_x = (x_fin - x_inicio) / ancho  # distancia entre columnas
+    paso_x = (x_fin - x_inicio) / ancho  
 
     for col in range(ancho):
         x = x_inicio + col * paso_x
