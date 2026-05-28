@@ -45,10 +45,9 @@ def seno(x, terminos=15):
 # Coseno
 def coseno(x, terminos=15):
     resultado = 0.0
-    termino_actual = 1.0  # primer término es 1
+    termino_actual = 1.0  
     for i in range(terminos):
         resultado = resultado + termino_actual
-        # Cada nuevo término: multiplica por -x² / ((2i+1)*(2i+2))
         n = 2 * i + 1
         termino_actual = termino_actual * (-1) * x * x / (n * (n + 1))
     return resultado
@@ -61,9 +60,9 @@ def logaritmo(x, terminos=100):
         return None
     u = (x - 1) / (x + 1)
     resultado = 0.0
-    u_potencia = u  # empieza con u^1
+    u_potencia = u  
     for i in range(terminos):
-        divisor = 2 * i + 1  # denominadores impares: 1, 3, 5, 7, ...
+        divisor = 2 * i + 1 
         resultado = resultado + u_potencia / divisor
-        u_potencia = u_potencia * u * u  # sube dos potencias: u³, u⁵, ...
+        u_potencia = u_potencia * u * u  
     return 2 * resultado
